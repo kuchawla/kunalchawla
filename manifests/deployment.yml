@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kcaks01-98ff"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kcaks01-98ff"
+    spec:
+      containers:
+        - name: "kcaks01-98ff"
+          image: "kcreg1.azurecr.io/kcaks01"
+          ports:
+          - containerPort: 80
